@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UNIFAM es una asosiacion familiar.">
+    <meta name="keywords"
+        content="Asociacion familiar">
+    <meta name="author" content="UNIFAM">
+    <!-- CSS externo principal del sitio -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>UNIFAM | Unión Familiar</title>
+</head>
+
+<body>
+    <!-- Encabezado principal fijo del sitio -->
+    <header class="site-header">
+        <div class="container header-content">
+            <p class="logo"><strong>UNIFAM</strong></p>
+
+            <!-- *** Checkbox oculto para controlar el menú hamburguesa sin JavaScript -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <!-- *** Botón visual del menú hamburguesa -->
+            <label for="menu-toggle" class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- Navegación principal -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a class="active-link" href="Inicio.html">Inicio</a></li>
+                    <li><a class="active-link" href="Historia.html">Nuestra Historia</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Ubicacion actual-->
+    <nav class="breadcrumb" aria-label="Ubicación actual">
+        <div class="container">
+            <a href="Inicio.html">Inicio</a>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección hero con columnas flotantes -->
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">Información</span>
+
+                    <h1>Bienvenido</h1>
+                    <p>
+                        Bienvenido a <strong>UNIFAM</strong>, una asociación familiar que esta para ayudarte.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn-primary" href="Historia.html">
+                            Conocer sobre nosotros
+                        </a>
+                    </div>
+
+                    <!-- Caja relativa que contiene un elemento absoluto -->
+                    <div class="hero-info">
+                        <span class="info-label">Nuevo</span>
+                        <p>
+                            <mark>Próxima Reunión Bimensual:</mark>
+                            Sábado 1 de Agosto.
+                        </p>
+                        <p>
+                            <mark>Hora:</mark>
+                            7pm.
+                        </p>
+
+                        <p>
+                            <mark>Modalidad:</mark>
+                            Presencial
+                        </p>
+                        <button class="btn-secondary">
+                            Confirmar asistencia
+                        </button>
+                    </div>
+                </div>
+
+                <figure class="hero-image">
+                    <img src="assets/images/LogoUNIFAM.png" alt="Union Familiar">
+                    <figcaption>
+                        Unión Familiar
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Información general de la plataforma -->
+        <section id="sobre-plataforma">
+            <div class="container">
+                <h2>Sobre nosotros</h2>
+                <p>
+                    Somos una organización sin fines de lucro,
+                    que busca omentar y fortalecer las buenas relaciones entre los asociados y sus familiares.
+                </p>
+
+                <h3>Objetivos de la Asociación</h3>
+                <div class="benefits-grid">
+                    <article class="benefit-card">
+                        <p>- Estimular el ahorro entre los asociados.</p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <p>- Facilitar créditos a los asociados para resolver necesidades de los miembros de la familia.
+                        </p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <p>- En general velar por los intereses de los asociados y sus familiares.</p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <p>- Colaborar solidariamente con entidades o personas ajenas a la Asociación,
+                            que requieran de un apoyo económico, emocional o de otra índole.</p>
+                    </article>
+
+                    <a class="btn-link" href="Historia.html">
+                        Conoce más sobre nosotros
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Pie de pagina -->
+
+        <footer id="contacto">
+            <h5>Contacto</h5>
+            <address>
+                UNIFAM - Unión Familiar<br>
+                Correo: contacto@unifam.cr<br>
+                San Jose, Costa Rica
+            </address>
+
+            <h6>Enlaces rápidos</h6>
+            <ul>
+                <li><a href="Historia.html">Nuestra Historia</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+            </ul>
+
+            <p>
+                <small>&copy; 2026 UNIFAM. Todos los derechos reservados.</small>
+            </p>
+        </footer>
+</body>
