@@ -896,9 +896,9 @@ Historia.html
     color: #555;
 }
 
-/* Parte de Jerarquia Administrativa*/
+/* Parte de Junta Directiva*/
 
-.jerarquia {
+.jerarquia-admin {
   padding: 60px 20px;
   text-align: center;
 }
@@ -913,6 +913,7 @@ Historia.html
   font-weight: 800;
   color: #1a2540;
   max-width: 700px;
+  text-align: center;
   margin: 0 auto 50px auto;
 }
 
