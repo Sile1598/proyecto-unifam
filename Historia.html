@@ -84,48 +84,84 @@
         </div>
     </section>
 
+    <!--Organigrama-->
     <section class="jerarquia-admin">
         <div class="container">
             <h1 class="titulo-seccion">Junta Directiva</h1>
-            <p class="subtitulo">La administración de UNIFAM está conformada por un equipo de asociados que asumen diferentes cargos de responsabilidad,
-                trabajando de manera coordinada para garantizar el buen funcionamiento y desarrollo de la asociación.
-            </p>
+            <p class="subtitulo">La administración de UNIFAM está conformada por un equipo de asociados que asumen 
+                diferentes cargos de responsabilidad, trabajando de manera coordinada para garantizar el buen funcionamiento 
+                y desarrollo de la asociación.</p>
 
-            <div class="cards-grid">
-                <div class="card">
-                    <span class="cargo">Presidente</span>
-                    <span class="nombre">Nando Mills Moddie</span>
+            <div class="organigrama">
+
+                <!-- Nivel 1: Presidente -->
+                <div class="nivel nivel-1">
+                    <div class="card">
+                        <span class="cargo">Presidente</span>
+                        <span class="nombre">Nando Mills Moddie</span>
+                    </div>
                 </div>
 
-                <div class="card">
-                    <span class="cargo">Vicepresidente</span>
-                    <span class="nombre">Keith Payne Griffiths</span>
+                <div class="conector"></div>
+
+                <!-- Nivel 2: Vicepresidente -->
+                <div class="nivel nivel-2">
+                    <div class="card">
+                        <span class="cargo">Vicepresidente</span>
+                        <span class="nombre">Keith Payne Griffiths</span>
+                    </div>
                 </div>
 
-                <div class="card">
-                    <span class="cargo">Secretario</span>
-                    <span class="nombre">Fernando Payne McKenzie</span>
+                <div class="conector"></div>
+
+                <!-- Nivel 3: Secretario, Tesorera y Fiscal (mismo nivel) -->
+                <div class="nivel nivel-3 nivel-multiple">
+                    <div class="linea-horizontal linea-3">
+                        <span class="rama"></span>
+                        <span class="rama"></span>
+                        <span class="rama"></span>
+                    </div>
+                    <div class="grupo">
+                        <div class="card">
+                            <span class="cargo">Secretario</span>
+                            <span class="nombre">Fernando Payne McKenzie</span>
+                        </div>
+                        <div class="card">
+                            <span class="cargo">Tesorera</span>
+                            <span class="nombre">Nancy Payne McKenzie</span>
+                        </div>
+                        <div class="card">
+                            <span class="cargo">Fiscal</span>
+                            <span class="nombre">Kirsha Payne Griffiths</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card">
-                    <span class="cargo">Tesorera</span>
-                    <span class="nombre">Nancy Payne McKenzie</span>
+                <div class="conector"></div>
+
+                <!-- Nivel 4: Vocal 1, Vocal 2 y Vocal 3 (mismo nivel) -->
+                <div class="nivel nivel-4 nivel-multiple">
+                    <div class="linea-horizontal linea-3">
+                        <span class="rama"></span>
+                        <span class="rama"></span>
+                        <span class="rama"></span>
+                    </div>
+                    <div class="grupo">
+                        <div class="card">
+                            <span class="cargo">Vocal 1</span>
+                            <span class="nombre">Jason Edwards Brown</span>
+                        </div>
+                        <div class="card">
+                            <span class="cargo">Vocal 2</span>
+                            <span class="nombre">Jefferson Mullings Scott</span>
+                        </div>
+                        <div class="card">
+                            <span class="cargo">Vocal 3</span>
+                            <span class="nombre">Anderson Morgan Morran</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card">
-                    <span class="cargo">Fiscal</span>
-                    <span class="nombre">Kirsha Payne Griffiths</span>
-                </div>
-
-                <div class="card">
-                    <span class="cargo">Vocal 1</span>
-                    <span class="nombre">Jason Edwards Brown</span>
-                </div>
-
-                <div class="card">
-                    <span class="cargo">Vocal 2</span>
-                    <span class="nombre">Jefferson Mullings Scott</span>
-                </div>
             </div>
         </div>
     </section>
