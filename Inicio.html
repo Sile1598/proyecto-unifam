@@ -83,9 +83,64 @@
                             <mark>Modalidad:</mark>
                             Presencial
                         </p>
-                        <button class="btn-secondary">
+                        <button class="btn-secondary" onclick="asistToggle()">
                             Confirmar asistencia
                         </button>
+
+                        <!-- ── Panel de confirmación ── -->
+                        <div id="asistencia-panel">
+                            <div class="asist-header">Confirmación de Asistencia</div>
+                            <div class="asist-body">
+
+                                <!-- Tipo de evento -->
+                                <div class="asist-field">
+                                    <label for="asist-tipo">Tipo de evento <span class="req">*</span></label>
+                                    <div class="asist-select-wrap">
+                                        <select id="asist-tipo" onchange="asistOnTipo()">
+                                            <option value="">Seleccione una modalidad</option>
+                                            <option value="presencial">Presencial</option>
+                                            <option value="virtual">Virtual</option>
+                                        </select>
+                                    </div>
+                                    <div class="asist-err" id="asist-err-tipo">Seleccione el tipo de evento.</div>
+                                </div>
+
+                                <!-- Nombre -->
+                                <div class="asist-field">
+                                    <label for="asist-nombre">Nombre y apellido <span class="req">*</span></label>
+                                    <input type="text" id="asist-nombre" placeholder="Ej: Juan Pérez González"
+                                        onblur="asistValidarNombre(true)">
+                                    <div class="asist-err" id="asist-err-nombre">Ingrese su nombre completo (solo
+                                        letras).</div>
+                                </div>
+
+                                <!-- Cédula -->
+                                <div class="asist-field">
+                                    <label for="asist-cedula">Número de cédula <span class="req">*</span></label>
+                                    <input type="text" id="asist-cedula" placeholder="Ej: 1-2345-6789" maxlength="12"
+                                        onblur="asistValidarCedula(true)">
+                                    <div class="asist-err" id="asist-err-cedula">Ingrese una cédula válida (9
+                                        dígitos).</div>
+                                </div>
+
+                                <!-- Lista de eventos (se carga desde JSON) -->
+                                <div id="asist-eventos-wrap">
+                                    <p class="eventos-label" id="asist-eventos-label"></p>
+                                    <div class="asist-err asist-err-evento" id="asist-err-evento">Seleccione un
+                                        evento.</div>
+                                    <div class="eventos-lista" id="asist-eventos-lista"></div>
+                                </div>
+
+                                <!-- Acciones -->
+                                <div class="asist-actions">
+                                    <button class="asist-btn-enviar" onclick="asistEnviar()">Confirmar</button>
+                                    <button class="asist-btn-cancelar" onclick="asistCerrar()">Cancelar</button>
+                                </div>
+
+                                <div id="asist-success"></div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
 
@@ -156,4 +211,6 @@
                 <small>&copy; 2026 UNIFAM. Todos los derechos reservados.</small>
             </p>
         </footer>
+        <script src="js/eventos.js"></script>
+        <script src="JSON/eventos.json"></script>
 </body>
