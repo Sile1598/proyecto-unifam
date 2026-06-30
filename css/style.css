@@ -1059,3 +1059,232 @@ Historia.html
     display: none;
   }
 }
+
+
+/* ============================================
+Panel de confirmación de asistencia
+===============================================*/
+#asistencia-panel {
+    display: none;
+    margin-top: 18px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
+    overflow: hidden;
+    animation: asist-slide 0.25s ease;
+}
+
+@keyframes asist-slide {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.asist-header {
+    background: #0F4C81;
+    color: #fff;
+    padding: 14px 20px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.asist-body {
+    padding: 20px;
+}
+
+/* Campos */
+.asist-field {
+    margin-bottom: 14px;
+}
+
+.asist-field label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0F4C81;
+    margin-bottom: 5px;
+}
+
+.asist-field label .req {
+    color: #e03a3a;
+}
+
+.asist-field input,
+.asist-field select {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    color: #1f2937;
+    background: #fff;
+    outline: none;
+    appearance: none;
+    transition: border-color 0.2s;
+}
+
+.asist-field input:focus,
+.asist-field select:focus {
+    border-color: #00A8E8;
+}
+
+.asist-field input.asist-invalid,
+.asist-field select.asist-invalid {
+    border-color: #e03a3a;
+    background: #fff6f6;
+}
+
+.asist-select-wrap {
+    position: relative;
+}
+
+.asist-select-wrap::after {
+    content: '▾';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0F4C81;
+    pointer-events: none;
+}
+
+.asist-err {
+    color: #c0392b;
+    font-size: 0.74rem;
+    margin-top: 3px;
+    display: none;
+}
+
+/* Lista de eventos */
+#asist-eventos-wrap {
+    margin-top: 4px;
+    display: none;
+}
+
+#asist-eventos-wrap p.eventos-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0F4C81;
+    margin-bottom: 8px;
+}
+
+.eventos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.evento-card {
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: border-color 0.18s, background 0.18s;
+    font-size: 0.84rem;
+}
+
+.evento-card:hover {
+    border-color: #00A8E8;
+    background: #f0f9ff;
+}
+
+.evento-card.seleccionado {
+    border-color: #0F4C81;
+    background: #dbeafe;
+}
+
+.evento-card input[type="radio"] {
+    display: none;
+}
+
+.evento-card .ev-titulo {
+    font-weight: 700;
+    color: #0F4C81;
+    margin-bottom: 2px;
+}
+
+.evento-card .ev-detalle {
+    color: #475569;
+    line-height: 1.5;
+}
+
+.evento-card .ev-link {
+    color: #00A8E8;
+    font-weight: 600;
+    word-break: break-all;
+    text-decoration: none;
+}
+
+.evento-card .ev-link:hover {
+    text-decoration: underline;
+}
+
+.asist-err-evento {
+    color: #c0392b;
+    font-size: 0.74rem;
+    margin-bottom: 10px;
+    display: none;
+}
+
+/* Botones del panel */
+.asist-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.asist-btn-enviar {
+    flex: 1;
+    padding: 10px;
+    background: #0F4C81;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.asist-btn-enviar:hover {
+    background: #00A8E8;
+    color: #00194a;
+}
+
+.asist-btn-cancelar {
+    padding: 10px 16px;
+    background: transparent;
+    color: #64748b;
+    font-size: 0.88rem;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.asist-btn-cancelar:hover {
+    border-color: #94a3b8;
+    color: #1f2937;
+}
+
+/* Éxito */
+#asist-success {
+    display: none;
+    background: #dcfce7;
+    border: 1.5px solid #16a34a;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #166534;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 12px;
+    text-align: center;
+}

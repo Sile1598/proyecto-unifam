@@ -1,0 +1,70 @@
+{
+  "presencial": [
+    {
+      "id": "p1",
+      "titulo": "Reunión Bimensual",
+      "fecha": "Sábado 1 de Agosto, 2026",
+      "hora": "7:00 PM",
+      "lugar": "San José",
+      "direccion": "Av. Central, Edificio UNIFAM, Piso 2"
+    },
+    {
+      "id": "p2",
+      "titulo": "Asamblea General",
+      "fecha": "Sábado 15 de Agosto, 2026",
+      "hora": "9:00 AM",
+      "lugar": "Alajuela",
+      "direccion": "Salón Comunal Los Naranjos, 200m norte del parque"
+    },
+    {
+      "id": "p3",
+      "titulo": "Taller de Ahorro Familiar",
+      "fecha": "Sábado 29 de Agosto, 2026",
+      "hora": "10:00 AM",
+      "lugar": "Heredia",
+      "direccion": "Centro Cultural Omar Dengo, Sala 3"
+    },
+    {
+      "id": "p4",
+      "titulo": "Convivio Familiar UNIFAM",
+      "fecha": "Domingo 7 de Septiembre, 2026",
+      "hora": "11:00 AM",
+      "lugar": "Cartago",
+      "direccion": "Parque La Libertad, Área de Picnic Norte"
+    }
+  ],
+  "virtual": [
+    {
+      "id": "v1",
+      "titulo": "Reunión Bimensual Virtual",
+      "fecha": "Viernes 8 de Agosto, 2026",
+      "hora": "7:00 PM",
+      "plataforma": "Zoom",
+      "link": "https://zoom.us/j/123456789?pwd=abcdef"
+    },
+    {
+      "id": "v2",
+      "titulo": "Charla: Planificación Financiera",
+      "fecha": "Viernes 22 de Agosto, 2026",
+      "hora": "6:30 PM",
+      "plataforma": "Zoom",
+      "link": "https://zoom.us/j/987654321?pwd=ghijkl"
+    },
+    {
+      "id": "v3",
+      "titulo": "Taller Virtual de Inversión",
+      "fecha": "Viernes 5 de Septiembre, 2026",
+      "hora": "7:00 PM",
+      "plataforma": "Zoom",
+      "link": "https://zoom.us/j/112233445?pwd=mnopqr"
+    },
+    {
+      "id": "v4",
+      "titulo": "Informe de Gestión Semestral",
+      "fecha": "Viernes 19 de Septiembre, 2026",
+      "hora": "6:00 PM",
+      "plataforma": "Zoom",
+      "link": "https://zoom.us/j/556677889?pwd=stuvwx"
+    }
+  ]
+}
