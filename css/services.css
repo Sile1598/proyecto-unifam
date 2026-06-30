@@ -1,0 +1,204 @@
+/*=============================
+HTML de Servicio de Prestamos
+===============================*/
+
+/* ── Sección formulario ── */
+#solicitud {
+    background-color: #f4f7fb;
+}
+
+#solicitud .seccion-titulo {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #0F4C81;
+    margin-bottom: 8px;
+}
+
+#solicitud .seccion-subtitulo {
+    color: #475569;
+    margin-bottom: 32px;
+    font-size: 1rem;
+}
+
+/* Dos columnas en escritorio */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tarjeta de columna */
+.form-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+}
+
+.form-card-header {
+    background-color: #0F4C81;
+    color: #fff;
+    padding: 18px 24px;
+}
+
+.form-card-header h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.form-card-body {
+    padding: 24px;
+}
+
+/* Campo genérico */
+.sf-field {
+    margin-bottom: 18px;
+}
+
+.sf-field label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0F4C81;
+    margin-bottom: 6px;
+}
+
+.sf-field label .req {
+    color: #e03a3a;
+    margin-left: 2px;
+}
+
+.sf-field input[type="text"],
+.sf-field input[type="email"],
+.sf-field input[type="tel"],
+.sf-field input[type="number"],
+.sf-field select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 0.93rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+}
+
+.sf-field input:focus,
+.sf-field select:focus {
+    border-color: #00A8E8;
+}
+
+.sf-field input.sf-invalid,
+.sf-field select.sf-invalid {
+    border-color: #e03a3a;
+    background: #fff6f6;
+}
+
+/* Select con flecha */
+.sf-select-wrap {
+    position: relative;
+}
+
+.sf-select-wrap::after {
+    content: '▾';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0F4C81;
+    pointer-events: none;
+}
+
+/* Campo de solo lectura */
+#sf-cuota {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 700;
+    cursor: default;
+}
+
+/* Badge de tasa */
+#sf-interest-badge {
+    margin-top: 14px;
+    min-height: 24px;
+}
+
+.interest-pill {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #00194a;
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.interest-desc {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+/* Monto hint */
+#sf-monto-hint {
+    font-size: 0.78rem;
+    color: #64748b;
+    margin-top: 4px;
+    display: none;
+}
+
+/* Mensajes de error */
+.sf-err {
+    color: #c0392b;
+    font-size: 0.76rem;
+    margin-top: 4px;
+    display: none;
+}
+
+/* Botón enviar */
+.sf-btn {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    background-color: #0F4C81;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+}
+
+.sf-btn:hover {
+    background-color: #00A8E8;
+    color: #00194a;
+}
+
+/* Alerta de éxito */
+#sf-success {
+    display: none;
+    background-color: #dcfce7;
+    border: 1.5px solid #16a34a;
+    border-radius: 10px;
+    padding: 18px 22px;
+    color: #166534;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    grid-column: 1 / -1;
+    font-size: 0.95rem;
+}

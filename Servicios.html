@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UNIFAM es una asosiacion familiar.">
+    <meta name="keywords"
+        content="eventos tecnológicos, Costa Rica, programación, inteligencia artificial, ciberseguridad, desarrollo web">
+    <meta name="author" content="UNIFAM">
+    <!-- CSS externo principal del sitio -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+    <title>UNIFAM | Servicios</title>
+</head>
+
+<!-- Contenido principal -->
+
+<body>
+    <!-- Encabezado principal fijo del sitio -->
+    <header class="site-header">
+        <div class="container header-content">
+            <p class="logo"><strong>UNIFAM</strong></p>
+
+            <!-- *** Checkbox oculto para controlar el menú hamburguesa sin JavaScript -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <!-- *** Botón visual del menú hamburguesa -->
+            <label for="menu-toggle" class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- Navegación principal -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a class="active-link" href="Inicio.html">Inicio</a></li>
+                    <li><a class="active-link" href="Historia.html">Nuestra Historia</a></li>
+                    <li><a class="active-link" href="Servicios.html">Servicios</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Ubicacion actual-->
+    <nav class="breadcrumb" aria-label="Ubicación actual">
+        <div class="container">
+            <a href="Inicio.html">Inicio</a>
+            <span>| Servicios</span>
+        </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════
+         SECCIÓN: SOLICITUD DE SERVICIO
+    ══════════════════════════════════════ -->
+    <section id="solicitud">
+        <div class="container">
+            <h2 class="seccion-titulo">Solicitud de Servicio</h2>
+            <p class="seccion-subtitulo">Complete el formulario y muy pronto le estaremos asesorando.</p>
+ 
+            <div class="form-grid">
+ 
+                <!-- COLUMNA 1: Selección de producto -->
+                <div class="form-card">
+                    <div class="form-card-header">
+                        <h3>Selección de Producto</h3>
+                    </div>
+                    <div class="form-card-body">
+ 
+                        <!-- Producto -->
+                        <div class="sf-field">
+                            <label for="sf-producto">Seleccione el producto <span class="req">*</span></label>
+                            <div class="sf-select-wrap">
+                                <select id="sf-producto" onchange="sfOnProductChange()">
+                                    <option value="">Escoja una opción</option>
+                                    <option value="rapido">Préstamo Rápido</option>
+                                    <option value="emergencia">Préstamo de Emergencia</option>
+                                    <option value="largo">Préstamo a Largo Plazo</option>
+                                    <option value="eventos">Eventos Financiados</option>
+                                </select>
+                            </div>
+                            <div class="sf-err" id="err-producto">Seleccione un producto.</div>
+                        </div>
+ 
+                        <!-- Badge de tasa e info -->
+                        <div id="sf-interest-badge"></div>
+ 
+                        <!-- Monto -->
+                        <div class="sf-field">
+                            <label for="sf-monto">Monto solicitado en colones <span class="req">*</span></label>
+                            <input type="number" id="sf-monto" placeholder="Ingrese el monto" min="0" step="1000"
+                                oninput="sfClearErr('err-monto','sf-monto'); sfCalcCuota()">
+                            <div id="sf-monto-hint"></div>
+                            <div class="sf-err" id="err-monto">Ingrese un monto válido dentro del rango del producto.</div>
+                        </div>
+ 
+                        <!-- Cuota estimada -->
+                        <div class="sf-field">
+                            <label for="sf-cuota">Cuota mensual estimada en colones</label>
+                            <input type="text" id="sf-cuota" placeholder="Seleccione producto e ingrese monto" readonly>
+                        </div>
+ 
+                    </div>
+                </div>
+ 
+                <!-- COLUMNA 2: Información Personal -->
+                <div class="form-card">
+                    <div class="form-card-header">
+                        <h3>Información Personal</h3>
+                    </div>
+                    <div class="form-card-body">
+ 
+                        <!-- Tipo de identificación -->
+                        <div class="sf-field">
+                            <label for="sf-tipo-id">Tipo de identificación <span class="req">*</span></label>
+                            <div class="sf-select-wrap">
+                                <select id="sf-tipo-id" onchange="sfClearErr('err-tipo-id','sf-tipo-id')">
+                                    <option value="">Escoja una opción</option>
+                                    <option value="cedula">Cédula de Identidad</option>
+                                    <option value="extranjero">Extranjero</option>
+                                </select>
+                            </div>
+                            <div class="sf-err" id="err-tipo-id">Seleccione el tipo de identificación.</div>
+                        </div>
+ 
+                        <!-- Número de ID -->
+                        <div class="sf-field">
+                            <label for="sf-num-id">Número de identificación <span class="req">*</span></label>
+                            <input type="text" id="sf-num-id" placeholder="Ej: 1-2345-6789" maxlength="20"
+                                onblur="sfValidateNumId(true)">
+                            <div class="sf-err" id="err-num-id">Número de identificación inválido para el tipo seleccionado.</div>
+                        </div>
+ 
+                        <!-- Nombre -->
+                        <div class="sf-field">
+                            <label for="sf-nombre">Nombre completo <span class="req">*</span></label>
+                            <input type="text" id="sf-nombre" placeholder="Nombre y apellidos"
+                                onblur="sfValidateNombre(true)">
+                            <div class="sf-err" id="err-nombre">Ingrese su nombre completo (solo letras).</div>
+                        </div>
+ 
+                        <!-- Correo -->
+                        <div class="sf-field">
+                            <label for="sf-correo">Correo electrónico <span class="req">*</span></label>
+                            <input type="email" id="sf-correo" placeholder="ejemplo@correo.com"
+                                onblur="sfValidateCorreo(true)">
+                            <div class="sf-err" id="err-correo">Ingrese un correo electrónico válido.</div>
+                        </div>
+ 
+                        <!-- Teléfono -->
+                        <div class="sf-field">
+                            <label for="sf-telefono">Teléfono <span class="req">*</span></label>
+                            <input type="tel" id="sf-telefono" placeholder="Ej: 8888-8888" maxlength="13"
+                                onblur="sfValidateTelefono(true)">
+                            <div class="sf-err" id="err-telefono">Ingrese un teléfono válido de 8 dígitos.</div>
+                        </div>
+ 
+                        <button class="sf-btn" onclick="sfSubmit()">Enviar solicitud</button>
+                    </div>
+                </div>
+ 
+                <!-- Mensaje de éxito (span completo) -->
+                <div id="sf-success"></div>
+ 
+            </div><!-- /form-grid -->
+        </div>
+    </section>
+
+    <!-- Pie de pagina -->
+
+    <footer id="contacto">
+        <h5>Contacto</h5>
+        <address>
+            UNIFAM - Unión Familiar<br>
+            Correo: contacto@unifam.cr<br>
+            San Jose, Costa Rica
+        </address>
+
+        <h6>Enlaces rápidos</h6>
+        <ul>
+            <li><a href="Inicio.html">Volver al Inicio</a></li>
+            <li><a href="Historia.html">Nuestra Historia</a></li>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+        </ul>
+
+        <p>
+            <small>&copy; 2026 UNIFAM. Todos los derechos reservados.</small>
+        </p>
+    </footer>
+    <script src="JS/servicios.js"></script>
+    <script src="JSON/productos.json"></script>
+</body>

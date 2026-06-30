@@ -1,0 +1,38 @@
+[
+  {
+    "id": "rapido",
+    "nombre": "Préstamo Rápido",
+    "tasa": 14.5,
+    "plazoMeses": 24,
+    "montoMin": 50000,
+    "montoMax": 500000,
+    "desc": "Aprobación en 24 h, sin fiador."
+  },
+  {
+    "id": "emergencia",
+    "nombre": "Préstamo de Emergencia",
+    "tasa": 18.0,
+    "plazoMeses": 12,
+    "montoMin": 20000,
+    "montoMax": 250000,
+    "desc": "Desembolso inmediato para imprevistos."
+  },
+  {
+    "id": "largo",
+    "nombre": "Préstamo a Largo Plazo",
+    "tasa": 9.75,
+    "plazoMeses": 120,
+    "montoMin": 500000,
+    "montoMax": 50000000,
+    "desc": "Tasa preferencial para proyectos grandes."
+  },
+  {
+    "id": "eventos",
+    "nombre": "Eventos Financiados",
+    "tasa": 12.0,
+    "plazoMeses": 36,
+    "montoMin": 100000,
+    "montoMax": 5000000,
+    "desc": "Financia bodas, graduaciones y más."
+  }
+]
