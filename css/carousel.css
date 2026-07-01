@@ -3,6 +3,8 @@ CAROUSEL
 ========================= */
 
 .carousel{
+    margin-top: 30px;
+    margin-inline: auto;
     position:relative;
     width:80%;
     max-width:900px;
