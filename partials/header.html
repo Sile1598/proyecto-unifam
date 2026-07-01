@@ -1,0 +1,40 @@
+<header class="site-header">
+        <div class="container header-content">
+            <p class="logo"><strong>UNIFAM</strong></p>
+
+            <!-- *** Checkbox oculto para controlar el menú hamburguesa sin JavaScript -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <!-- *** Botón visual del menú hamburguesa -->
+            <label for="menu-toggle" class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- Navegación principal -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a class="active-link" href="Index.html">Inicio</a></li>
+                    <li><a class="active-link" href="Historia.html">Nuestra Historia</a></li>
+                    <li><a class="active-link" href="Beneficios.html">Beneficios y Actividades</a></li>
+                    <li><a class="active-link" href="Servicios.html">Servicios</a></li>
+                    <li><a class="active-link" href="Comentarios.html">Comentarios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <div class="header-auth">
+                        <a href="Login.html" id="btnLoginHeader" class="btn-auth">
+                            Iniciar sesión
+                        </a>
+
+                        <div id="usuarioSesion" style="display: none;">
+                            
+                            <button id="btnCerrarSesion" class="btn-auth-icon" title="Cerrar sesión">
+                                <span id="usuarioNombre"></span>
+                                🚪
+                            </button>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
