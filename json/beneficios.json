@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombre": "Préstamos para Asociados",
+    "categoria": "Beneficio",
+    "fecha": "Disponible todo el año",
+    "lugar": "UNIFAM",
+    "descripcion": "Beneficio financiero dirigido a los asociados que necesitan apoyo económico para resolver necesidades familiares."
+  },
+  {
+    "id": 2,
+    "nombre": "Paseo a la Playa",
+    "categoria": "Actividad Recreativa",
+    "fecha": "15/08/2026",
+    "lugar": "Puntarenas",
+    "descripcion": "Paseo familiar organizado por la Asociación UNIFAM para fomentar la convivencia entre los asociados y sus familias."
+  },
+  {
+    "id": 3,
+    "nombre": "Paseo a la Montaña",
+    "categoria": "Actividad Recreativa",
+    "fecha": "05/09/2026",
+    "lugar": "Monteverde",
+    "descripcion": "Actividad recreativa en un ambiente natural, pensada para compartir en familia y fortalecer los lazos entre los asociados."
+  },
+  {
+    "id": 4,
+    "nombre": "Reunión Bimensual",
+    "categoria": "Reunión",
+    "fecha": "01/08/2026",
+    "lugar": "San José",
+    "descripcion": "Reunión programada para informar a los asociados sobre temas importantes, proyectos y actividades próximas."
+  },
+  {
+    "id": 5,
+    "nombre": "Día de la Madre",
+    "categoria": "Celebración",
+    "fecha": "15/08/2026",
+    "lugar": "Sede UNIFAM",
+    "descripcion": "Celebración especial dedicada a las madres asociadas y familiares de la organización."
+  },
+  {
+    "id": 6,
+    "nombre": "Día del Niño",
+    "categoria": "Celebración",
+    "fecha": "09/09/2026",
+    "lugar": "Salón Comunal",
+    "descripcion": "Actividad familiar organizada para celebrar a los niños y promover espacios de recreación sana."
+  },
+  {
+    "id": 7,
+    "nombre": "Día Afro Costarricense",
+    "categoria": "Celebración",
+    "fecha": "31/08/2026",
+    "lugar": "Limón",
+    "descripcion": "Celebración cultural para reconocer y compartir la riqueza de la identidad afro costarricense."
+  },
+  {
+    "id": 8,
+    "nombre": "Comunicado Importante",
+    "categoria": "Noticia",
+    "fecha": "Disponible en plataforma",
+    "lugar": "UNIFAM",
+    "descripcion": "Espacio destinado a publicar noticias, avisos o comunicados relevantes para los asociados."
+  }
+]
