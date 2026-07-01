@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beneficios y actividades de la Asociación UNIFAM.">
+    <meta name="keywords" content="UNIFAM, beneficios, actividades, reuniones, eventos familiares">
+    <meta name="author" content="UNIFAM">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>UNIFAM | Beneficios y Actividades</title>
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <main>
+
+        <section class="beneficios-section">
+            <div class="container">
+                <h1 class="seccion-titulo">Beneficios y Actividades</h1>
+                <p class="seccion-subtitulo">
+                    En esta sección puede consultar los beneficios, actividades familiares,
+                    reuniones, paseos y celebraciones disponibles para los asociados de UNIFAM.
+                </p>
+
+                <div class="filtros-beneficios">
+                    <div class="filtro-campo">
+                        <label for="buscarActividad">Buscar actividad o beneficio</label>
+                        <input type="text" id="buscarActividad" placeholder="Ej: paseo, reunión, préstamo...">
+                    </div>
+
+                    <div class="filtro-campo">
+                        <label for="filtroCategoria">Filtrar por categoría</label>
+                        <select id="filtroCategoria">
+                            <option value="todos">Todas las categorías</option>
+                            <option value="Beneficio">Beneficio</option>
+                            <option value="Actividad Recreativa">Actividad Recreativa</option>
+                            <option value="Reunión">Reunión</option>
+                            <option value="Celebración">Celebración</option>
+                            <option value="Noticia">Noticia</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-secondary" id="btnLimpiarFiltros">
+                        Limpiar filtros
+                    </button>
+                </div>
+
+                <div id="mensajeBeneficios" class="empty-state" style="display: none;">
+                    <h3>No se encontraron resultados</h3>
+                    <p>Intente buscar con otra palabra o seleccione otra categoría.</p>
+                </div>
+
+                <div class="beneficios-grid" id="contenedorBeneficios">
+                    <!-- Aquí se cargan las tarjetas desde beneficios.json -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/beneficios.js"></script>
+    <script src="js/layout.js"></script>
+
+</body>
+
+</html>
