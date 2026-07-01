@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comentarios y sugerencias para la Asociación UNIFAM.">
+    <meta name="keywords" content="UNIFAM, comentarios, sugerencias, asociados">
+    <meta name="author" content="UNIFAM">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>UNIFAM | Comentarios y Sugerencias</title>
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <main>
+        <section class="comentarios-section">
+            <div class="container">
+                <h1 class="seccion-titulo">Comentarios y Sugerencias</h1>
+
+                <p class="seccion-subtitulo">
+                    En esta sección los asociados pueden compartir comentarios,
+                    sugerencias o recomendaciones relacionadas con las actividades,
+                    beneficios y servicios de UNIFAM.
+                </p>
+
+                <div class="comentarios-layout">
+
+                    <div class="comentario-form-card">
+                        <div class="comentario-form-header">
+                            <h3>Enviar comentario</h3>
+                        </div>
+
+                        <div class="comentario-form-body">
+
+                            <div class="comentario-field">
+                                <label for="comentarioNombre">
+                                    Nombre del asociado <span class="req">*</span>
+                                </label>
+                                <input type="text" id="comentarioNombre" placeholder="Ingrese su nombre completo">
+                                <div class="comentario-err" id="errComentarioNombre">
+                                    Ingrese un nombre válido.
+                                </div>
+                            </div>
+
+                            <div class="comentario-field">
+                                <label for="comentarioTexto">
+                                    Comentario o sugerencia <span class="req">*</span>
+                                </label>
+                                <textarea id="comentarioTexto" placeholder="Escriba su comentario o sugerencia"></textarea>
+                                <div class="comentario-err" id="errComentarioTexto">
+                                    Ingrese un comentario de al menos 10 caracteres.
+                                </div>
+                            </div>
+
+                            <button class="btn-primary comentario-btn" id="btnGuardarComentario">
+                                Guardar comentario
+                            </button>
+
+                            <div id="comentarioSuccess"></div>
+                        </div>
+                    </div>
+
+                    <div class="comentarios-list-card">
+                        <div class="comentario-form-header">
+                            <h3>Comentarios registrados</h3>
+                        </div>
+
+                        <div class="comentarios-list-body">
+                            <div id="listaComentarios">
+                                <!-- Aquí se cargan los comentarios desde localStorage -->
+                            </div>
+
+                            <div id="comentariosVacios" class="empty-state">
+                                <h3>No hay comentarios registrados</h3>
+                                <p>Cuando un asociado escriba un comentario, aparecerá en esta sección.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/comentarios.js"></script>
+    <script src="js/layout.js"></script>
+
+</body>
+
+</html>
