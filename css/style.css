@@ -150,17 +150,34 @@ HEADER Y NAVEGACIÓN
 
 /* Enlaces del menú */
 .main-nav a {
+    position: relative;
     color: white;
-    font-weight: bold;
-    padding: 8px 10px;
-    border-radius: 6px;
-    display: inline-block;
+    text-decoration: none;
+    padding: 10px 14px;
+    transition: color .25s ease;
 }
 
-/* Cambio visual al pasar el mouse */
-.main-nav a:hover {
-    background-color: #00b4d8;
-    color: #00194a;
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 4px;
+    height: 3px;
+    background: #00A8E8;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transition: transform .25s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active-link::after {
+    transform: scaleX(1);
+}
+
+.main-nav a.active-link {
+    color: #ffffff;
+    font-weight: 700;
 }
 
 /* =========================
@@ -904,7 +921,7 @@ UX: ESTADOS DE INTERFAZ
 /* ==========================================
    PERSONALIZACIÓN UNIFAM
    Unión Familiar
-==========================================
+========================================== */
 
 
 
@@ -2003,4 +2020,177 @@ Panel de confirmación de asistencia
 
 .btn-auth-icon:hover {
     transform: scale(1.15);
+}
+
+/* ==========================================
+   PROPUESTA UNIFAM - INICIO
+========================================== */
+
+#propuesta-unifam {
+    background:
+        radial-gradient(circle at top left, rgba(0, 168, 232, 0.18), transparent 35%),
+        linear-gradient(135deg, #f8fbff 0%, #eaf6ff 100%);
+    padding: 76px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.propuesta-header {
+    max-width: 780px;
+    margin: 0 auto 44px auto;
+    text-align: center;
+}
+
+.propuesta-badge {
+    display: inline-block;
+    background: #ffffff;
+    color: #0F4C81;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    border: 1px solid #dbeafe;
+}
+
+.propuesta-header h2 {
+    color: #0F4C81;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 14px;
+    line-height: 1.15;
+}
+
+.propuesta-header p {
+    color: #475569;
+    font-size: 1.08rem;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.propuesta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.propuesta-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #dbeafe;
+    border-radius: 24px;
+    padding: 30px 26px;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.10);
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.propuesta-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(90deg, #0F4C81, #00A8E8);
+}
+
+.propuesta-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 42px rgba(15, 23, 42, 0.16);
+}
+
+.propuesta-card-destacada {
+    background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+}
+
+.propuesta-icono {
+    width: 62px;
+    height: 62px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #dbeafe, #ecfeff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 0 1px #bae6fd;
+}
+
+.propuesta-card h3 {
+    color: #0F4C81;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.propuesta-card p {
+    color: #475569;
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+.propuesta-lista {
+    margin-top: 38px;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.10);
+    text-align: center;
+}
+
+.propuesta-lista h3 {
+    color: #00194a;
+    margin-bottom: 20px;
+    font-size: 1.35rem;
+}
+
+.propuesta-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.propuesta-items span {
+    background: #ecfeff;
+    color: #00194a;
+    border: 1px solid #bae6fd;
+    border-radius: 999px;
+    padding: 11px 18px;
+    font-weight: 800;
+    font-size: 0.92rem;
+    transition: all 0.2s ease;
+}
+
+.propuesta-items span:hover {
+    background: #dbeafe;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .propuesta-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    #propuesta-unifam {
+        padding: 52px 0;
+    }
+
+    .propuesta-card,
+    .propuesta-lista {
+        padding: 24px 20px;
+    }
+
+    .propuesta-items {
+        justify-content: stretch;
+    }
+
+    .propuesta-items span {
+        width: 100%;
+        text-align: center;
+    }
 }

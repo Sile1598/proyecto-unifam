@@ -6,6 +6,21 @@ async function cargarLayout() {
         document.getElementById("header").innerHTML =
             await header.text();
 
+        // Marcar automáticamente la página actual
+        const paginaActual = window.location.pathname.split("/").pop();
+
+        document.querySelectorAll(".main-nav a").forEach(function (link) {
+
+            const href = link.getAttribute("href");
+
+            if (href === paginaActual) {
+
+                link.classList.add("active-link");
+
+            }
+
+        });
+
         const footer = await fetch("partials/footer.html");
         document.getElementById("footer").innerHTML =
             await footer.text();
