@@ -16,45 +16,14 @@
 <!-- Contenido principal -->
 <body>
     <!-- Encabezado principal fijo del sitio -->
-    <header class="site-header">
-        <div class="container header-content">
-            <p class="logo"><strong>UNIFAM</strong></p>
+    <div id="header"></div>
 
-            <!-- *** Checkbox oculto para controlar el menú hamburguesa sin JavaScript -->
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-
-            <!-- *** Botón visual del menú hamburguesa -->
-            <label for="menu-toggle" class="menu-button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <!-- Navegación principal -->
-            <nav class="main-nav">
-                <ul>
-                    <li><a class="active-link" href="Inicio.html">Inicio</a></li>
-                    <li><a class="active-link" href="Historia.html">Nuestra Historia</a></li>
-                    <li><a class="active-link" href="Servicios.html">Servicios</a></li>
-                    <li><a href="#beneficios">Beneficios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Ubicacion actual-->
-    <nav class="breadcrumb" aria-label="Ubicación actual">
-        <div class="container">
-            <a href="Inicio.html">Inicio</a>
-            <span>| Nuestra Historia</span>
-        </div>
-    </nav>
+    
     
 <!--Historia-->
     <section class="nuestra-historia">
         <div class="image-container">
-            <img src="assets/images/LogoUNIFAM.png" alt="Historia UNIFAM">
+            <img src="assets/images/historia.jpeg" alt="Historia UNIFAM">
         </div>
         <div class="text-container">
             <h2>Nuestra Historia</h2>
@@ -169,25 +138,6 @@
 
     <!-- Pie de pagina -->
 
-    <footer id="contacto">
-        <h5>Contacto</h5>
-        <address>
-            UNIFAM - Unión Familiar<br>
-            Correo: contacto@unifam.cr<br>
-            San Jose, Costa Rica
-        </address>
-
-        <h6>Enlaces rápidos</h6>
-        <ul>
-            <li><a href="Inicio.html">Volver al Inicio</a></li>
-            <li><a href="Historia.html">Nuestra Historia</a></li>
-            <li><a href="Servicios.html">Servicios</a></li>
-            <li><a href="#beneficios">Beneficios</a></li>
-        </ul>
-
-        <p>
-            <small>&copy; 2026 UNIFAM. Todos los derechos reservados.</small>
-        </p>
-    </footer>
-
+    <div id="footer"></div>
+    <script src="js/layout.js"></script>
 </body>
