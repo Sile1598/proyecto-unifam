@@ -15,44 +15,33 @@
 
 <body>
     <!-- Encabezado principal fijo del sitio -->
-    <header class="site-header">
-        <div class="container header-content">
-            <p class="logo"><strong>UNIFAM</strong></p>
-
-            <!-- *** Checkbox oculto para controlar el menú hamburguesa sin JavaScript -->
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-
-            <!-- *** Botón visual del menú hamburguesa -->
-            <label for="menu-toggle" class="menu-button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <!-- Navegación principal -->
-            <nav class="main-nav">
-                <ul>
-                    <li><a class="active-link" href="Inicio.html">Inicio</a></li>
-                    <li><a class="active-link" href="Historia.html">Nuestra Historia</a></li>
-                    <li><a class="active-link" href="Servicios.html">Servicios</a></li>
-                    <li><a href="#beneficios">Beneficios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Ubicacion actual-->
-    <nav class="breadcrumb" aria-label="Ubicación actual">
-        <div class="container">
-            <a href="Inicio.html">Inicio</a>
-        </div>
-    </nav>
+    <div id="header"></div>
 
     <!-- Contenido principal -->
     <main>
         <!-- Sección hero con columnas flotantes -->
         <section id="hero" class="hero">
+            <div class="carousel">
+                <button class="btn prev">&#10094;</button>
+                <div class="carousel-container">
+                    <div class="slide active">
+                        <img src="assets/images/carousel-1.jpeg" alt="Imagen 1">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/carousel-2.jpeg" alt="Imagen 2">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/carousel-3.jpeg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/carousel-4.jpeg" alt="Imagen 4">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/carousel-5.jpeg" alt="Imagen 5">
+                    </div>
+                </div>
+                <button class="btn next">&#10095;</button>
+            </div>
             <div class="container hero-content">
                 <div class="hero-text">
                     <span class="hero-badge">Información</span>
@@ -153,6 +142,46 @@
             </div>
         </section>
 
+        <!-- Accesos rápidos a funcionalidades -->
+        <section class="accesos-rapidos">
+            <div class="container">
+                <h2>Accesos rápidos</h2>
+                <p>
+                    Consulte fácilmente las principales secciones de la plataforma UNIFAM.
+                </p>
+
+                <div class="accesos-grid">
+
+                    <article class="acceso-card">
+                        <h3>Beneficios y Actividades</h3>
+                        <p>
+                            Consulte actividades familiares, reuniones, celebraciones,
+                            beneficios y noticias importantes.
+                        </p>
+                        <a class="btn-primary" href="Beneficios.html">Ver beneficios</a>
+                    </article>
+
+                    <article class="acceso-card">
+                        <h3>Servicios</h3>
+                        <p>
+                            Solicite información sobre préstamos y calcule una cuota
+                            mensual estimada según el producto seleccionado.
+                        </p>
+                        <a class="btn-primary" href="Servicios.html">Solicitar servicio</a>
+                    </article>
+
+                    <article class="acceso-card">
+                        <h3>Comentarios</h3>
+                        <p>
+                            Envíe sugerencias o recomendaciones relacionadas con las
+                            actividades y servicios de la asociación.
+                        </p>
+                        <a class="btn-primary" href="Comentarios.html">Enviar comentario</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
         <!-- Información general de la plataforma -->
         <section id="sobre-plataforma">
             <div class="container">
@@ -192,25 +221,9 @@
         
         <!-- Pie de pagina -->
 
-        <footer id="contacto">
-            <h5>Contacto</h5>
-            <address>
-                UNIFAM - Unión Familiar<br>
-                Correo: contacto@unifam.cr<br>
-                San Jose, Costa Rica
-            </address>
-
-            <h6>Enlaces rápidos</h6>
-            <ul>
-                <li><a href="Historia.html">Nuestra Historia</a></li>
-                <li><a href="Servicios.html">Servicios</a></li>
-                <li><a href="#beneficios">Beneficios</a></li>
-            </ul>
-
-            <p>
-                <small>&copy; 2026 UNIFAM. Todos los derechos reservados.</small>
-            </p>
-        </footer>
+        <div id="footer"></div>
+        
         <script src="js/eventos.js"></script>
-        <script src="JSON/eventos.json"></script>
+        <script src="js/carousel.js"></script>
+        <script src="js/layout.js"></script>
 </body>
