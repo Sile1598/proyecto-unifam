@@ -1,0 +1,227 @@
+/* ========================
+Historia.html
+===========================*/
+
+.nuestra-historia {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image-container {
+  margin-top: 150px;  
+  flex: 1;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.text-container {
+  flex: 1;
+}
+
+.text-container h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  color: #6b6b6b;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .our-history {
+        flex-direction: column;
+    }
+
+    .nuestra-historia {
+        display: block;
+    }
+
+    .image-container {
+    margin-top: 0px;  
+    }
+}
+
+
+
+.nuestra-historia p {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Parte de Junta Directiva*/
+
+.jerarquia-admin {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.titulo-seccion {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a2540;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto 50px auto;
+}
+
+.subtitulo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a2540;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.organigrama {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nivel {
+  display: flex;
+  justify-content: center;
+}
+
+/* Linea conectora vertical entre niveles */
+.conector {
+  width: 2px;
+  height: 30px;
+  background: #c3cfdf;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 22px 36px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e9f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 200px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cargo {
+  font-weight: 700;
+  color: #0f6fb5;
+  font-size: 1.05rem;
+}
+
+.nombre {
+  color: #4a5568;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Destacar al Presidente como el nivel mas alto */
+.nivel-1 .card {
+  border-top: 4px solid #0f6fb5;
+}
+
+/* Nivel con multiples personas */
+.nivel-multiple {
+  flex-direction: column;
+  align-items: center;
+}
+
+.linea-horizontal {
+  height: 2px;
+  background: #c3cfdf;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Para 3 personas: la linea es mas ancha */
+.linea-3 {
+  width: 460px;
+}
+
+.rama {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 30px;
+  background: #c3cfdf;
+}
+
+.rama:nth-child(1) {
+  left: 0;
+}
+
+.rama:nth-child(2) {
+  left: 50%;
+  transform: translateX(-1px);
+}
+
+.rama:nth-child(3) {
+  right: 0;
+}
+
+.grupo {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .linea-3 {
+    width: 340px;
+  }
+
+  .grupo {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    min-width: 180px;
+    padding: 18px 24px;
+  }
+
+  .grupo {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .linea-horizontal {
+    width: 2px;
+    height: 30px;
+    margin-bottom: 0;
+  }
+
+  .rama {
+    display: none;
+  }
+}

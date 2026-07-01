@@ -1,0 +1,60 @@
+
+/* ==========================================
+   ACCESOS RÁPIDOS - INICIO
+========================================== */
+
+.accesos-rapidos {
+    background-color: #f4f7fb;
+    padding: 48px 0;
+}
+
+.accesos-rapidos h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0F4C81;
+    margin-bottom: 8px;
+}
+
+.accesos-rapidos > .container > p {
+    color: #475569;
+    margin-bottom: 32px;
+}
+
+.accesos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+.acceso-card {
+    background-color: white;
+    border: 1px solid #dbeafe;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.acceso-card h3 {
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.acceso-card p {
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+    .accesos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .acceso-card .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+}

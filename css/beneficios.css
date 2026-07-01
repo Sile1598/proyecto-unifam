@@ -1,0 +1,187 @@
+/* ==========================================
+   BENEFICIOS Y ACTIVIDADES
+========================================== */
+
+.beneficios-section {
+    background-color: #f4f7fb;
+    padding: 48px 0;
+}
+
+.seccion-titulo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0F4C81;
+    margin-bottom: 8px;
+}
+
+.seccion-subtitulo {
+    color: #475569;
+    margin-bottom: 32px;
+    font-size: 1rem;
+}
+
+/* Caja de filtros */
+.filtros-beneficios {
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    margin-bottom: 32px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 18px;
+    align-items: end;
+}
+
+/* Campos */
+.filtro-campo label {
+    display: block;
+    color: #0F4C81;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.filtro-campo input,
+.filtro-campo select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 0.93rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #fff;
+    outline: none;
+}
+
+.filtro-campo input:focus,
+.filtro-campo select:focus {
+    border-color: #00A8E8;
+}
+
+/* Botón de limpiar filtros */
+#btnLimpiarFiltros {
+    height: 42px;
+    white-space: nowrap;
+}
+
+/* Grid de tarjetas */
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+/* Tarjeta de beneficio */
+.beneficio-card {
+    background-color: white;
+    border: 1px solid #dbeafe;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.beneficio-card-content {
+    padding: 22px;
+    flex: 1;
+}
+
+.beneficio-card-content h3 {
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.beneficio-card-content p {
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+.beneficio-card-content strong {
+    color: #00194a;
+}
+
+/* Categoría */
+.beneficio-category {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #00194a;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* Etiqueta superior */
+.beneficio-label {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #00194a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Responsive tablet */
+@media (max-width: 900px) {
+    .filtros-beneficios {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #btnLimpiarFiltros {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+}
+
+/* Responsive móvil */
+@media (max-width: 700px) {
+    .beneficios-section {
+        padding: 40px 0;
+    }
+
+    .filtros-beneficios {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .filtro-campo input,
+    .filtro-campo select,
+    #btnLimpiarFiltros {
+        width: 100%;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficio-card-content {
+        padding: 18px;
+    }
+}
+
+/* Responsive móvil pequeño */
+@media (max-width: 420px) {
+    .seccion-titulo {
+        font-size: 1.6rem;
+    }
+
+    .seccion-subtitulo {
+        font-size: 0.95rem;
+    }
+
+    .beneficio-category,
+    .beneficio-label {
+        font-size: 0.72rem;
+    }
+}
