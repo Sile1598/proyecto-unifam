@@ -3,7 +3,7 @@ let EVENTOS = { presencial: [], virtual: [] };
 
 async function asistCargarEventos() {
     try {
-        const res = await fetch('JSON/eventos.json');
+        const res = await fetch('json/eventos.json');
         EVENTOS = await res.json();
     } catch (err) {
         console.error('Error al cargar eventos.json:', err);
