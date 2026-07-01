@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIFAM | Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <main>
+        <section class="login-section">
+            <div class="container">
+
+                <div class="login-card">
+                    <div class="login-header">
+                        <h2>Ingreso de Asociados</h2>
+                        <p>Acceda a la plataforma de UNIFAM.</p>
+                    </div>
+
+                    <div class="login-body">
+
+                        <div class="login-field">
+                            <label for="loginCorreo">Correo electrónico</label>
+                            <input type="email" id="loginCorreo" placeholder="ejemplo@correo.com">
+                            <div class="login-err" id="errLoginCorreo">Ingrese un correo válido.</div>
+                        </div>
+
+                        <div class="login-field">
+                            <label for="loginPassword">Contraseña</label>
+                            <input type="password" id="loginPassword" placeholder="Ingrese su contraseña">
+                            <div class="login-err" id="errLoginPassword">Ingrese su contraseña.</div>
+                        </div>
+
+                        <button class="btn-primary login-btn" id="btnLogin">
+                            Iniciar sesión
+                        </button>
+
+                        <p class="login-link">
+                            ¿No tiene cuenta?
+                            <a href="Registro.html">Registrarse</a>
+                        </p>
+
+                        <div id="loginMensaje"></div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/layout.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
