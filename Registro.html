@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIFAM | Registro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <main>
+        <section class="login-section">
+            <div class="container">
+
+                <div class="login-card">
+                    <div class="login-header">
+                        <h2>Registro de Asociados</h2>
+                        <p>Cree una cuenta para ingresar a la plataforma.</p>
+                    </div>
+
+                    <div class="login-body">
+
+                        <div class="login-field">
+                            <label for="registroNombre">Nombre completo</label>
+                            <input type="text" id="registroNombre" placeholder="Nombre y apellidos">
+                            <div class="login-err" id="errRegistroNombre">Ingrese un nombre válido.</div>
+                        </div>
+
+                        <div class="login-field">
+                            <label for="registroCorreo">Correo electrónico</label>
+                            <input type="email" id="registroCorreo" placeholder="ejemplo@correo.com">
+                            <div class="login-err" id="errRegistroCorreo">Ingrese un correo válido.</div>
+                        </div>
+
+                        <div class="login-field">
+                            <label for="registroPassword">Contraseña</label>
+                            <input type="password" id="registroPassword" placeholder="Mínimo 6 caracteres">
+                            <div class="login-err" id="errRegistroPassword">La contraseña debe tener al menos 6 caracteres.</div>
+                        </div>
+
+                        <button class="btn-primary login-btn" id="btnRegistro">
+                            Registrarse
+                        </button>
+
+                        <p class="login-link">
+                            ¿Ya tiene cuenta?
+                            <a href="Login.html">Iniciar sesión</a>
+                        </p>
+
+                        <div id="registroMensaje"></div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/layout.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+
+</html>
