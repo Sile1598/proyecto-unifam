@@ -73,7 +73,7 @@ function iniciarSesion() {
     loginMensaje.style.display = "block";
 
     setTimeout(function () {
-        window.location.href = "index.html";
+        window.location.href = "Servicios.html";
     }, 1200);
 }
 
